@@ -22,7 +22,7 @@ public class Square : Shape //INHERITANCE
 
     public override void Area()
     {
-        Square sq = new Square();
+        Square sq = gameObject.AddComponent<Square>();
         sq.Length = 1;
         sq.Width = 2;
         sqLength = sq.Length;
@@ -34,8 +34,7 @@ public class Square : Shape //INHERITANCE
     {
         GameObject squareShape = GameObject.CreatePrimitive(PrimitiveType.Cube);
         squareShape.transform.localScale = new Vector2(sqWidth, sqLength);
-        //squareShape.GetComponent<Renderer>().material.SetColor("_Color", Color.red);
-        squareShape.GetComponent<Renderer>().material.color = new Color(1,0,0);
+        squareShape.GetComponent<Renderer>().material.SetColor("_Color", Color.red);
 
     }
 }
