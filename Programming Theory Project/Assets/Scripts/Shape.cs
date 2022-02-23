@@ -46,6 +46,6 @@ public class Shape : MonoBehaviour
 
     public virtual void ShapeColor()
     {
-        //GetComponent<Renderer>().material.SetColor("_Color", Color.red); //Default color for a shape is red.
+        //Color and scale
     }
 }
