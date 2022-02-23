@@ -8,17 +8,12 @@ public class Square : Shape //INHERITANCE
     // Start is called before the first frame update
     void Start()
     {
-        Area();
-        ShapeColor();
+        Area(); //ABSTRACTION
+        ShapeColor(); //ABSTRACTION
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
-    public override void Area()
+    public override void Area() //POLYMORPHISM
     {
         Length = 1;
         Width = 2;
@@ -27,9 +22,9 @@ public class Square : Shape //INHERITANCE
         
     }
 
-    public override void ShapeColor()
+    public override void ShapeColor() //POLYMORPHISM
     {
-        gameObject.transform.localScale = new Vector2(Width, Length);
+        gameObject.transform.localScale = new Vector3(Width, Length, 1);
         gameObject.GetComponent<Renderer>().material.color = Color.red;
 
     }
